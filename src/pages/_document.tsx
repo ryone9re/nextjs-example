@@ -1,25 +1,29 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
-import theme from '../styles/theme';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
 import createEmotionCache from '../libs/createEmotionCache';
+import theme from '../styles/theme';
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="ja">
+      <Html lang='ja'>
         <Head>
           {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="shortcut icon" href="/static/favicon.ico" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+          <meta name='theme-color' content={theme.palette.primary.main} />
+          <link rel='shortcut icon' href='/static/favicon.ico' />
+          <link
+            rel='stylesheet'
+            href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
+          />
+          <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons' />
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {(this.props as any).emotionStyleTags}
         </Head>
-          <body>
-            <Main />
-            <NextScript />
-          </body>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
       </Html>
     );
   }
