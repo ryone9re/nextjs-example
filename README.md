@@ -1,6 +1,6 @@
 # Next.js with TypeScript, Eslint and Prettier example
 
-This is a really simple project that shows the usage of Next.js with TypeScript, MUI, and devcontainer.
+This is a really simple project that shows the usage of Next.js with TypeScript and MUI.
 
 ## How to use it?
 
